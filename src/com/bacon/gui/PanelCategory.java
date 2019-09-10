@@ -5,7 +5,6 @@
  */
 package com.bacon.gui;
 
-import com.bacon.domain.Category;
 import com.bacon.Aplication;
 import com.bacon.domain.Product;
 import java.awt.Color;
@@ -68,8 +67,7 @@ public class PanelCategory extends PanelCapturaMod implements PropertyChangeList
 
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
-        
-        logger.debug("Escuchando evt:"+evt.getPropertyName()+":"+evt.getPropagationId());
+        logger.debug("Escuchando evt:"+evt.getPropertyName());
         if (PanelProduct2.AC_ADD_QUICK.equals(evt.getPropertyName())) {
             pcs.firePropertyChange(evt.getPropertyName(), null, evt.getNewValue());
         }

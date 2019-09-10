@@ -27,8 +27,6 @@ import java.nio.file.LinkOption;
 import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -287,12 +285,6 @@ public final class Aplication implements ActionListener, PropertyChangeListener,
         return org.balx.Utiles.colorAleatorio(20, 150);
     }
 
-    public DecimalFormat getCurrencyFormat() {
-        DecimalFormat DCFORM_P = (DecimalFormat) NumberFormat.getInstance();
-        DCFORM_P.applyPattern("$ ###,###,###");
-        return DCFORM_P;
-    }
-
     public void setUser(User user) {
         user.setPassword("");
         this.user = user;
@@ -517,10 +509,10 @@ public final class Aplication implements ActionListener, PropertyChangeListener,
 
     @Override
     public void propertyChange(final PropertyChangeEvent evt) {
-        System.out.println("event:" + evt);
+        System.out.println("event:"+evt);
         if (PanelProduct2.AC_ADD_QUICK.equals(evt.getPropertyName())) {
             Product producto = (Product) evt.getNewValue();
-//            guiManager.getPanelPedido().addProduct(producto);
+            guiManager.getPanelPedido().addProduct(producto);
         }
     }
 

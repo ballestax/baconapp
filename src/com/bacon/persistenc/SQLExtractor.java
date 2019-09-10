@@ -1,4 +1,4 @@
-package com.bacon.persistence;
+package com.bacon.persistenc;
 
 import java.io.ByteArrayInputStream;
 import java.sql.SQLException;

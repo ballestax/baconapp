@@ -62,10 +62,4 @@ public abstract class DAOFactory {
 
     public abstract ConfigDAO getConfigDAO() throws DAOException;
 
-    public abstract ProductDAO getProductDAO() throws DAOException;
-
-    public abstract IngredientDAO getIngredientDAO() throws DAOException;
-    
-    public abstract AdditionalDAO getAdditionalDAO() throws DAOException;
-
 }

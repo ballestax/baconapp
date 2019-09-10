@@ -693,9 +693,7 @@ public class GUIManager {
 //        int w = 360;
 //        int h = 200;
 //        dialog.setPreferredSize(new Dimension(w, h));
-        PanelCustomPedido pnCustomPed = new PanelCustomPedido(app, product);
-        pnCustomPed.addPropertyChangeListener(getPanelPedido());
-        dialog.add(pnCustomPed);
+        dialog.add(new PanelCustomPedido(app, product));
         dialog.setResizable(false);
         dialog.setTitle(product.getName());
         dialog.pack();
