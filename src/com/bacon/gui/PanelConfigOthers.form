@@ -42,6 +42,8 @@
                   <Component id="regZeros" alignment="0" max="32767" attributes="0"/>
                   <Component id="lbInfo6" alignment="0" pref="431" max="32767" attributes="0"/>
                   <Component id="regDocument" alignment="0" max="32767" attributes="0"/>
+                  <Component id="regDelivery1" alignment="0" max="32767" attributes="0"/>
+                  <Component id="lbInfo7" alignment="1" pref="431" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -56,7 +58,11 @@
               <Component id="lbInfo" min="-2" pref="25" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="regDelivery" min="-2" pref="28" max="-2" attributes="0"/>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="lbInfo7" min="-2" pref="25" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="regDelivery1" min="-2" pref="28" max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
               <Component id="lbInfo1" min="-2" pref="25" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="regPrintPrev" min="-2" max="-2" attributes="0"/>
@@ -194,6 +200,21 @@
       </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="lbInfo6">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jLabel2"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+            <EtchetBorder/>
+          </Border>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="com.bacon.gui.util.Registro" name="regDelivery1">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new com.bacon.gui.util.Registro(BoxLayout.X_AXIS, &quot;Domicilio&quot;, &quot;&quot;)"/>
+      </AuxValues>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lbInfo7">
       <Properties>
         <Property name="text" type="java.lang.String" value="jLabel2"/>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">

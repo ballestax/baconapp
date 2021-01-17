@@ -43,6 +43,12 @@ public class PanelConfigOthers extends javax.swing.JPanel implements ActionListe
 //        exportDIR = property;
         String delivery = app.getConfiguration().getProperty(com.bacon.Configuration.DELIVERY_VALUE, "0");
         regDelivery.setText(delivery);
+        
+        lbInfo7.setText("Valor del domicilio 2");
+
+//        exportDIR = property;
+        String delivery2 = app.getConfiguration().getProperty(com.bacon.Configuration.DELIVERY2_VALUE, "0");
+        regDelivery1.setText(delivery2);
 
         lbInfo1.setText("Imprimir pedido previo");
         String printPrevius = app.getConfiguration().getProperty(com.bacon.Configuration.PRINT_PREV_DELIVERY, "false");
@@ -127,6 +133,8 @@ public class PanelConfigOthers extends javax.swing.JPanel implements ActionListe
         lbInfo5 = new javax.swing.JLabel();
         regDocument = new com.bacon.gui.util.Registro(BoxLayout.X_AXIS, "Domicilio", "");
         lbInfo6 = new javax.swing.JLabel();
+        regDelivery1 = new com.bacon.gui.util.Registro(BoxLayout.X_AXIS, "Domicilio", "");
+        lbInfo7 = new javax.swing.JLabel();
 
         lbTitle.setBackground(java.awt.Color.lightGray);
         lbTitle.setOpaque(true);
@@ -158,6 +166,9 @@ public class PanelConfigOthers extends javax.swing.JPanel implements ActionListe
         lbInfo6.setText("jLabel2");
         lbInfo6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        lbInfo7.setText("jLabel2");
+        lbInfo7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -182,7 +193,9 @@ public class PanelConfigOthers extends javax.swing.JPanel implements ActionListe
                     .addComponent(lbInfo5, javax.swing.GroupLayout.DEFAULT_SIZE, 431, Short.MAX_VALUE)
                     .addComponent(regZeros, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lbInfo6, javax.swing.GroupLayout.DEFAULT_SIZE, 431, Short.MAX_VALUE)
-                    .addComponent(regDocument, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(regDocument, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(regDelivery1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lbInfo7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 431, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -194,7 +207,11 @@ public class PanelConfigOthers extends javax.swing.JPanel implements ActionListe
                 .addComponent(lbInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(regDelivery, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lbInfo7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(regDelivery1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lbInfo1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(regPrintPrev)
@@ -235,8 +252,10 @@ public class PanelConfigOthers extends javax.swing.JPanel implements ActionListe
     private javax.swing.JLabel lbInfo4;
     private javax.swing.JLabel lbInfo5;
     private javax.swing.JLabel lbInfo6;
+    private javax.swing.JLabel lbInfo7;
     private javax.swing.JLabel lbTitle;
     private com.bacon.gui.util.Registro regDelivery;
+    private com.bacon.gui.util.Registro regDelivery1;
     private com.bacon.gui.util.Registro regDocument;
     private javax.swing.JCheckBox regInvoiceOutStock;
     private com.bacon.gui.util.Registro regPrefix;
@@ -250,6 +269,9 @@ public class PanelConfigOthers extends javax.swing.JPanel implements ActionListe
         if (ACTION_APPLY.equals(e.getActionCommand())) {
             String value = regDelivery.getText();
             app.getConfiguration().setProperty(com.bacon.Configuration.DELIVERY_VALUE, value);
+            
+            String value2 = regDelivery1.getText();
+            app.getConfiguration().setProperty(com.bacon.Configuration.DELIVERY2_VALUE, value2);
 
             boolean selected = regPrintPrev.isSelected();
             app.getConfiguration().setProperty(com.bacon.Configuration.PRINT_PREV_DELIVERY, String.valueOf(selected));
