@@ -44,6 +44,8 @@ public class MyConstants {
     public static final String[] FILTROS_TEXTO = {"IGUAL A", "EMPIEZA POR", "CONTIENE"};
     public static final String[] FILTROS_NUMERO = {"=", ">", ">=", "<", "<=", "<>"};
     public static final String[] FILTROS_BOOLEANOS = {"=", "<>"};
+    
+    public static final int PERMISIONS_ORDERS_MODULE = 1;
 
     public static final Permission[] PERMISSIONS = {
         new Permission("show-admin-module", "Ver el modulo administrador"),

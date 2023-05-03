@@ -4,6 +4,7 @@ import com.bacon.Aplication;
 import com.bacon.Configuration;
 import static com.bacon.Control.logger;
 import com.bacon.GUIManager;
+import com.bacon.MyConstants;
 import com.bacon.domain.Client;
 import com.bacon.domain.ConfigDB;
 import com.bacon.domain.Invoice;
@@ -254,8 +255,9 @@ public class PanelConfirmPedido extends PanelCapturaMod implements ActionListene
 
         pcs.firePropertyChange(AC_SHOW_INVOICE, invoice, null);
 
-        Permission perm = app.getControl().getPermissionByName("show-pedidos-module");
-        app.getGuiManager().showBasicPanel(app.getGuiManager().getPanelBasicPedidos(), perm);
+        Permission perm = MyConstants.PERMISSIONS[MyConstants.PERMISIONS_ORDERS_MODULE];
+        if(app.getControl().hasPermission(app.getUser(), perm))
+        app.getGuiManager().showBasicPanel(app.getGuiManager().getPanelBasicOrders(), perm);
     }
 
     /**

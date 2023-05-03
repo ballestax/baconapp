@@ -171,6 +171,7 @@ public class GUIManager {
     private PanelInvoicedOrder panelInvoicedOrder;
 
     private boolean showingInfo = false;
+    private PanelQuickSearch panelQSearch;
 
     private GUIManager() {
 
